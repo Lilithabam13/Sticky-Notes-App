@@ -1,11 +1,11 @@
-# 📝 Django Sticky Notes App
+# Django Sticky Notes App
 
 A beginner-friendly Django web application that allows users to create, view, update, complete, pin, and delete sticky notes.
 
 This project demonstrates core Django concepts such as **models**, **views**, **forms**, **URL routing**, **templates**, **static files**, and **automated tests**. It is suitable for learning purposes and a small portfolio project.
 ---
 
-## 🚀 Features
+## Features
 
 * Create new sticky notes
 * View a list of all sticky notes
@@ -18,7 +18,7 @@ This project demonstrates core Django concepts such as **models**, **views**, **
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Python 3**
 * **Django**
@@ -27,7 +27,7 @@ This project demonstrates core Django concepts such as **models**, **views**, **
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Sticky_Notes_App_1/
@@ -53,16 +53,16 @@ Sticky_Notes_App_1/
 ```
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Lilithabam13/Sticky-Notes-App.git
 cd Sticky-Notes-App
 ```
 
-### 2️⃣ Create and Activate a Virtual Environment
+### 2. Create and Activate a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -70,20 +70,20 @@ source venv/bin/activate  # Linux / WSL / macOS
 venv\Scripts\activate     # Windows
 ```
 
-### 3️⃣ Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install django
 ```
 
-### 4️⃣ Run Database Migrations
+### 4. Run Database Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5️⃣ Start the Development Server
+### 5️. Start the Development Server
 
 ```bash
 python manage.py runserver
@@ -91,11 +91,11 @@ python manage.py runserver
 
 Visit the app in your browser at:
 
-👉 **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+**[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 This project includes automated tests for key views.
 
@@ -107,7 +107,7 @@ python manage.py test
 
 ---
 
-## 📌 Notes on Version Control
+## Notes on Version Control
 
 * The **SQLite database (`db.sqlite3`)** is excluded from version control
 * **Virtual environments** are excluded via `.gitignore`
@@ -117,7 +117,7 @@ To keep the repository clean and production-ready.
 
 ---
 
-## 📖 Learning Outcomes
+## Learning Outcomes
 
 Through this project, the following Django concepts are demonstrated:
 
@@ -132,12 +132,12 @@ Through this project, the following Django concepts are demonstrated:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Lilitha Bam**
 
 ---
 
-## 📄 License
+## License
 
 This project is intended for educational purposes.
