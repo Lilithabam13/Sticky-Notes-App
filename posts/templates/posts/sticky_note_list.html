@@ -1,0 +1,35 @@
+<!-- posts/templates/posts/sticky_note_list.html -->
+ {% extends "base.html" %}
+
+ {% block title %}
+ Sticky Notes - {{ page_title }}
+ {% endblock %}
+
+ {% block content %}
+ <h2>{{ page_title }}</h2>
+ 
+ <a href="{% url 'sticky_note_create' %}">Add sticky note</a>
+
+<ul>
+    {% for sticky_note in sticky_notes %}
+    <li>
+        <h3>{{ sticky_note.title }}</h3>
+        <p>{{ sticky_note.content }}</p>
+
+        <a href="{% url 'sticky_note_detail' pk=sticky_note.pk %}">View</a>
+        <a href="{% url 'sticky_note_update' pk=sticky_note.pk %}">Edit</a>
+        <a href="{% url 'sticky_note_delete' pk=sticky_note.pk %}">Delete</a>
+        
+        {% if not sticky_note.completed_at %}
+        <a href="{% url 'sticky_note_complete' pk=sticky_note.pk %}">
+            Mark Complete
+        </a>
+        {% else %}
+        <span>Completed</span>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>No sticky notes yet.</li>
+    {% endfor %}
+</ul>
+ {% endblock %}

@@ -1,0 +1,32 @@
+<!-- posts/templates/posts/sticky_note_delete.hmtl -->
+{% extends "base.html" %}
+
+<!-- Sets the page title shown in the browser tab-->
+{% block title %}
+Delete Sticky Note
+{% endblock %}
+
+
+{% block content %}
+<h2>
+    Delete Sticky Note
+</h2>
+<!-- Confirmation message emphasising which sticky note will be deleted -->
+<p>
+    Are you sure you want to delete the Sticky Note
+    "<strong>{{ sticky_note.title }}</strong>"
+</p>
+
+<!-- POST request ensures safe deletion -->
+<form method="post">
+
+    <!-- Protects against CSRF attacks -->
+    {% csrf_token %}
+
+    <!-- Submits the form and deletes the sticky note -->
+    <button type="submit">Yes, delete</button>
+
+    <!-- User able to cancel and return to sticky note list page -->
+    <a href="{% url 'sticky_note_list' %}">Cancel</a>
+</form>
+{% endblock %}

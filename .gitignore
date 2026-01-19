@@ -1,0 +1,22 @@
+# Django
+db.sqlite3
+media/
+static/admin/
+staticfiles/
+
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+

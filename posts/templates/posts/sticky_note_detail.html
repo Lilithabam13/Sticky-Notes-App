@@ -1,0 +1,26 @@
+<!-- posts/templates/posts/sticky_note_detail.hmtl -->
+ {% extends "base.html" %}
+
+ {% block title %}
+ Sticky Notes - {{ sticky_note.title }}
+ {% endblock %}
+
+ {% block content %}
+ <h2>
+    {{ sticky_note.title }}
+ </h2>
+ <p>
+    {{ sticky_note.content }}
+ </p>
+ <p>
+    Created at: {{ sticky_note.created_at }}
+ </p>
+ <p>
+   Author: {{sticky_note.author.name|default:"No author assigned"}}
+ </p>
+ <a href="{% url 'sticky_note_update' pk=sticky_note.pk %}">Update Sticky Note</a>
+ <a href="{% url 'sticky_note_delete' pk=sticky_note.pk %}">Delete Sticky Note</a>
+ <a href="{% url 'sticky_note_list' %}">Back to Sticky Notes</a>
+ {% endblock %}
+
+ 
